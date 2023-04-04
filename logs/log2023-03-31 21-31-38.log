@@ -1,0 +1,46 @@
+[2023-03-31 21:31:41,131] root - INFO - Training pipleine config: TrainingPipelineConfig(artifact_dir='C:\\Users\\shiva\\Desktop\\test2\\project_template\\us_visa\\artifact')
+[2023-03-31 21:31:41,132] root - INFO - Data Ingestion config: DataIngestionConfig(dataset_download_url='https://raw.githubusercontent.com/Shivan118/Main-Branching/main/Visadataset.csv', raw_data_dir='C:\\Users\\shiva\\Desktop\\test2\\project_template\\us_visa\\artifact\\data_ingestion\\2023-03-31-21-31-38\\raw_data', ingested_train_dir='C:\\Users\\shiva\\Desktop\\test2\\project_template\\us_visa\\artifact\\data_ingestion\\2023-03-31-21-31-38\\ingested_data\\train', ingested_test_dir='C:\\Users\\shiva\\Desktop\\test2\\project_template\\us_visa\\artifact\\data_ingestion\\2023-03-31-21-31-38\\ingested_data\\test')
+[2023-03-31 21:31:41,132] root - INFO - >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>Data Ingestion log started.<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< 
+
+
+[2023-03-31 21:31:41,134] root - INFO - Downloading file from :[https://raw.githubusercontent.com/Shivan118/Main-Branching/main/Visadataset.csv] into :[C:\Users\shiva\Desktop\test2\project_template\us_visa\artifact\data_ingestion\2023-03-31-21-31-38\raw_data\Visadataset.csv]
+[2023-03-31 21:31:41,451] root - INFO - File :[C:\Users\shiva\Desktop\test2\project_template\us_visa\artifact\data_ingestion\2023-03-31-21-31-38\raw_data\Visadataset.csv] has been downloaded successfully.
+[2023-03-31 21:31:41,451] root - INFO - Reading csv file: [C:\Users\shiva\Desktop\test2\project_template\us_visa\artifact\data_ingestion\2023-03-31-21-31-38\raw_data\Visadataset.csv]
+[2023-03-31 21:31:41,532] root - INFO - Splitting data into train and test
+[2023-03-31 21:31:41,539] root - INFO - Exporting training dataset to file: [C:\Users\shiva\Desktop\test2\project_template\us_visa\artifact\data_ingestion\2023-03-31-21-31-38\ingested_data\train\Visadataset.csv]
+[2023-03-31 21:31:41,614] root - INFO - Exporting test dataset to file: [C:\Users\shiva\Desktop\test2\project_template\us_visa\artifact\data_ingestion\2023-03-31-21-31-38\ingested_data\test\Visadataset.csv]
+[2023-03-31 21:31:41,633] root - INFO - Data Ingestion artifact:[DataIngestionArtifact(train_file_path='C:\\Users\\shiva\\Desktop\\test2\\project_template\\us_visa\\artifact\\data_ingestion\\2023-03-31-21-31-38\\ingested_data\\train\\Visadataset.csv', test_file_path='C:\\Users\\shiva\\Desktop\\test2\\project_template\\us_visa\\artifact\\data_ingestion\\2023-03-31-21-31-38\\ingested_data\\test\\Visadataset.csv', is_ingested=True, message='Data ingestion completed successfully.')]
+[2023-03-31 21:31:41,634] root - INFO - >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>Data Validation log started.<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< 
+
+
+[2023-03-31 21:31:41,657] root - INFO - Validation Process Started
+[2023-03-31 21:31:41,887] root - INFO - Train_set status|is Train filename validated?: True|is train columns validated?: True|is train column name validated?: True|whole missing columns?True
+[2023-03-31 21:31:41,887] root - INFO - Test_set status|is Test filename validated?: Trueis test col numbers validated?: True|is test column names validated? True| whole missing columns? True
+[2023-03-31 21:31:41,887] root - INFO - Validation Process Completed
+[2023-03-31 21:31:41,888] root - INFO - Data validation artifact: DataValidationArtifact(schema_file_path='C:\\Users\\shiva\\Desktop\\test2\\project_template\\config\\schema.yaml', is_validated=True, message='Data validation performed')
+[2023-03-31 21:31:41,888] root - INFO - >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>Data Validation log completed.<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+[2023-03-31 21:31:41,888] root - INFO - Data transformation config: DataTransformationConfig(transformed_train_dir='C:\\Users\\shiva\\Desktop\\test2\\project_template\\us_visa\\artifact\\data_transformation\\2023-03-31-21-31-38\\transformed_data\\train', transformed_test_dir='C:\\Users\\shiva\\Desktop\\test2\\project_template\\us_visa\\artifact\\data_transformation\\2023-03-31-21-31-38\\transformed_data\\test', preprocessed_object_file_path='C:\\Users\\shiva\\Desktop\\test2\\project_template\\us_visa\\artifact\\data_transformation\\2023-03-31-21-31-38\\preprocessed\\preprocessed.pkl')
+[2023-03-31 21:31:41,888] root - INFO - >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>Data Transformation log started.<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+[2023-03-31 21:31:41,888] root - INFO - Obtaining preprocessing object.
+[2023-03-31 21:31:41,900] root - INFO - Obtaining training and test file path.
+[2023-03-31 21:31:41,901] root - INFO - Loading training and test data as pandas dataframe.
+[2023-03-31 21:31:42,004] root - INFO - Outlier capped in train df
+[2023-03-31 21:31:42,008] root - INFO - Outlier capped in test df
+[2023-03-31 21:31:42,008] root - INFO - Splitting input and target feature from training and testing dataframe.
+[2023-03-31 21:31:42,072] root - INFO - Applying preprocessing object on training dataframe and testing dataframe.
+[2023-03-31 21:32:02,694] root - INFO - Saving transformed training and test array.
+[2023-03-31 21:32:02,704] root - INFO - Saving preprocessing object.
+[2023-03-31 21:32:02,742] root - INFO - Data transformation artifact: DataTransformationArtifact(is_transformed=True, message='Data transformation successfull.', transformed_train_file_path='C:\\Users\\shiva\\Desktop\\test2\\project_template\\us_visa\\artifact\\data_transformation\\2023-03-31-21-31-38\\transformed_data\\train\\Visadataset.npz', transformed_test_file_path='C:\\Users\\shiva\\Desktop\\test2\\project_template\\us_visa\\artifact\\data_transformation\\2023-03-31-21-31-38\\transformed_data\\test\\Visadataset.npz', preprocessed_object_file_path='C:\\Users\\shiva\\Desktop\\test2\\project_template\\us_visa\\artifact\\data_transformation\\2023-03-31-21-31-38\\preprocessed\\preprocessed.pkl')
+[2023-03-31 21:32:02,748] root - INFO - >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>Data Transformation log completed.<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< 
+
+
+[2023-03-31 21:32:02,749] root - INFO - Model trainer config: ModelTrainerConfig(trained_model_file_path='C:\\Users\\shiva\\Desktop\\test2\\project_template\\us_visa\\artifact\\model_trainer\\2023-03-31-21-31-38\\trained_model\\model.pkl', base_accuracy=0.6, model_config_file_path='config\\model.yaml')
+[2023-03-31 21:32:02,749] root - INFO - >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>Model trainer log started.<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< 
+[2023-03-31 21:32:02,749] root - INFO - Loading transformed training dataset
+[2023-03-31 21:32:02,778] root - INFO - Loading transformed testing dataset
+[2023-03-31 21:32:02,819] root - INFO - Splitting training and testing input and target feature
+[2023-03-31 21:32:02,819] root - INFO - Extracting model config file path
+[2023-03-31 21:32:02,819] root - INFO - Initializing model factory class using above model config file: config\model.yaml
+[2023-03-31 21:33:03,664] root - INFO - Expected accuracy: 0.6
+[2023-03-31 21:33:05,294] root - INFO - Initiating operation model selection
+[2023-03-31 21:33:08,962] root - INFO - Started Initializing model from config file

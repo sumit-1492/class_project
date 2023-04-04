@@ -1,0 +1,37 @@
+[2023-03-31 11:40:45,801] root - INFO - Training pipleine config: TrainingPipelineConfig(artifact_dir='C:\\Users\\shiva\\Desktop\\test2\\project_template\\us_visa\\artifact')
+[2023-03-31 11:40:45,801] root - INFO - Data Ingestion config: DataIngestionConfig(dataset_download_url='https://raw.githubusercontent.com/Shivan118/Main-Branching/main/Visadataset.csv', raw_data_dir='C:\\Users\\shiva\\Desktop\\test2\\project_template\\us_visa\\artifact\\data_ingestion\\2023-03-31-11-40-39\\raw_data', ingested_train_dir='C:\\Users\\shiva\\Desktop\\test2\\project_template\\us_visa\\artifact\\data_ingestion\\2023-03-31-11-40-39\\ingested_data\\train', ingested_test_dir='C:\\Users\\shiva\\Desktop\\test2\\project_template\\us_visa\\artifact\\data_ingestion\\2023-03-31-11-40-39\\ingested_data\\test')
+[2023-03-31 11:40:45,802] root - INFO - >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>Data Ingestion log started.<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< 
+
+
+[2023-03-31 11:40:45,803] root - INFO - Downloading file from :[https://raw.githubusercontent.com/Shivan118/Main-Branching/main/Visadataset.csv] into :[C:\Users\shiva\Desktop\test2\project_template\us_visa\artifact\data_ingestion\2023-03-31-11-40-39\raw_data\Visadataset.csv]
+[2023-03-31 11:40:47,712] root - INFO - File :[C:\Users\shiva\Desktop\test2\project_template\us_visa\artifact\data_ingestion\2023-03-31-11-40-39\raw_data\Visadataset.csv] has been downloaded successfully.
+[2023-03-31 11:40:47,712] root - INFO - Reading csv file: [C:\Users\shiva\Desktop\test2\project_template\us_visa\artifact\data_ingestion\2023-03-31-11-40-39\raw_data\Visadataset.csv]
+[2023-03-31 11:40:47,877] numexpr.utils - INFO - NumExpr defaulting to 8 threads.
+[2023-03-31 11:40:47,912] root - INFO - Splitting data into train and test
+[2023-03-31 11:40:47,932] root - INFO - Exporting training dataset to file: [C:\Users\shiva\Desktop\test2\project_template\us_visa\artifact\data_ingestion\2023-03-31-11-40-39\ingested_data\train\Visadataset.csv]
+[2023-03-31 11:40:48,130] root - INFO - Exporting test dataset to file: [C:\Users\shiva\Desktop\test2\project_template\us_visa\artifact\data_ingestion\2023-03-31-11-40-39\ingested_data\test\Visadataset.csv]
+[2023-03-31 11:40:48,176] root - INFO - Data Ingestion artifact:[DataIngestionArtifact(train_file_path='C:\\Users\\shiva\\Desktop\\test2\\project_template\\us_visa\\artifact\\data_ingestion\\2023-03-31-11-40-39\\ingested_data\\train\\Visadataset.csv', test_file_path='C:\\Users\\shiva\\Desktop\\test2\\project_template\\us_visa\\artifact\\data_ingestion\\2023-03-31-11-40-39\\ingested_data\\test\\Visadataset.csv', is_ingested=True, message='Data ingestion completed successfully.')]
+[2023-03-31 11:40:48,178] root - INFO - >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>Data Validation log started.<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< 
+
+
+[2023-03-31 11:40:48,197] root - INFO - Validation Process Started
+[2023-03-31 11:40:48,611] root - INFO - Train_set status|is Train filename validated?: True|is train columns validated?: True|is train column name validated?: True|whole missing columns?True
+[2023-03-31 11:40:48,612] root - INFO - Test_set status|is Test filename validated?: Trueis test col numbers validated?: True|is test column names validated? True| whole missing columns? True
+[2023-03-31 11:40:48,612] root - INFO - Validation Process Completed
+[2023-03-31 11:40:48,612] root - INFO - Data validation artifact: DataValidationArtifact(schema_file_path='C:\\Users\\shiva\\Desktop\\test2\\project_template\\config\\schema.yaml', is_validated=True, message='Data validation performed')
+[2023-03-31 11:40:48,612] root - INFO - >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>Data Validation log completed.<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+[2023-03-31 11:40:48,612] root - INFO - Data transformation config: DataTransformationConfig(transformed_train_dir='C:\\Users\\shiva\\Desktop\\test2\\project_template\\us_visa\\artifact\\data_transformation\\2023-03-31-11-40-39\\transformed_data\\train', transformed_test_dir='C:\\Users\\shiva\\Desktop\\test2\\project_template\\us_visa\\artifact\\data_transformation\\2023-03-31-11-40-39\\transformed_data\\test', preprocessed_object_file_path='C:\\Users\\shiva\\Desktop\\test2\\project_template\\us_visa\\artifact\\data_transformation\\2023-03-31-11-40-39\\preprocessed\\preprocessed.pkl')
+[2023-03-31 11:40:48,612] root - INFO - >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>Data Transformation log started.<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+[2023-03-31 11:40:48,612] root - INFO - Obtaining preprocessing object.
+[2023-03-31 11:40:48,625] root - INFO - Obtaining training and test file path.
+[2023-03-31 11:40:48,625] root - INFO - Loading training and test data as pandas dataframe.
+[2023-03-31 11:40:48,918] root - INFO - Outlier capped in train df
+[2023-03-31 11:40:48,925] root - INFO - Outlier capped in test df
+[2023-03-31 11:40:48,925] root - INFO - Splitting input and target feature from training and testing dataframe.
+[2023-03-31 11:40:49,031] root - INFO - Applying preprocessing object on training dataframe and testing dataframe.
+[2023-03-31 11:40:54,261] root - INFO - Saving transformed training and test array.
+[2023-03-31 11:40:54,275] root - INFO - Saving preprocessing object.
+[2023-03-31 11:40:54,289] root - INFO - Data transformation artifact: DataTransformationArtifact(is_transformed=True, message='Data transformation successfull.', transformed_train_file_path='C:\\Users\\shiva\\Desktop\\test2\\project_template\\us_visa\\artifact\\data_transformation\\2023-03-31-11-40-39\\transformed_data\\train\\Visadataset.npz', transformed_test_file_path='C:\\Users\\shiva\\Desktop\\test2\\project_template\\us_visa\\artifact\\data_transformation\\2023-03-31-11-40-39\\transformed_data\\test\\Visadataset.npz', preprocessed_object_file_path='C:\\Users\\shiva\\Desktop\\test2\\project_template\\us_visa\\artifact\\data_transformation\\2023-03-31-11-40-39\\preprocessed\\preprocessed.pkl')
+[2023-03-31 11:40:54,291] root - INFO - >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>Data Transformation log completed.<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< 
+
+

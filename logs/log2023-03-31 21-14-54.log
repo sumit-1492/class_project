@@ -1,0 +1,68 @@
+[2023-03-31 21:14:56,990] root - INFO - Training pipleine config: TrainingPipelineConfig(artifact_dir='c:\\Users\\shiva\\Desktop\\test2\\project_template\\us_visa\\artifact')
+[2023-03-31 21:14:56,991] root - INFO - Data Ingestion config: DataIngestionConfig(dataset_download_url='https://raw.githubusercontent.com/Shivan118/Main-Branching/main/Visadataset.csv', raw_data_dir='c:\\Users\\shiva\\Desktop\\test2\\project_template\\us_visa\\artifact\\data_ingestion\\2023-03-31-21-14-54\\raw_data', ingested_train_dir='c:\\Users\\shiva\\Desktop\\test2\\project_template\\us_visa\\artifact\\data_ingestion\\2023-03-31-21-14-54\\ingested_data\\train', ingested_test_dir='c:\\Users\\shiva\\Desktop\\test2\\project_template\\us_visa\\artifact\\data_ingestion\\2023-03-31-21-14-54\\ingested_data\\test')
+[2023-03-31 21:14:56,992] root - INFO - >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>Data Ingestion log started.<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< 
+
+
+[2023-03-31 21:14:56,993] root - INFO - Downloading file from :[https://raw.githubusercontent.com/Shivan118/Main-Branching/main/Visadataset.csv] into :[c:\Users\shiva\Desktop\test2\project_template\us_visa\artifact\data_ingestion\2023-03-31-21-14-54\raw_data\Visadataset.csv]
+[2023-03-31 21:14:57,318] root - INFO - File :[c:\Users\shiva\Desktop\test2\project_template\us_visa\artifact\data_ingestion\2023-03-31-21-14-54\raw_data\Visadataset.csv] has been downloaded successfully.
+[2023-03-31 21:14:57,318] root - INFO - Reading csv file: [c:\Users\shiva\Desktop\test2\project_template\us_visa\artifact\data_ingestion\2023-03-31-21-14-54\raw_data\Visadataset.csv]
+[2023-03-31 21:14:57,416] root - INFO - Splitting data into train and test
+[2023-03-31 21:14:57,427] root - INFO - Exporting training dataset to file: [c:\Users\shiva\Desktop\test2\project_template\us_visa\artifact\data_ingestion\2023-03-31-21-14-54\ingested_data\train\Visadataset.csv]
+[2023-03-31 21:14:57,539] root - INFO - Exporting test dataset to file: [c:\Users\shiva\Desktop\test2\project_template\us_visa\artifact\data_ingestion\2023-03-31-21-14-54\ingested_data\test\Visadataset.csv]
+[2023-03-31 21:14:57,567] root - INFO - Data Ingestion artifact:[DataIngestionArtifact(train_file_path='c:\\Users\\shiva\\Desktop\\test2\\project_template\\us_visa\\artifact\\data_ingestion\\2023-03-31-21-14-54\\ingested_data\\train\\Visadataset.csv', test_file_path='c:\\Users\\shiva\\Desktop\\test2\\project_template\\us_visa\\artifact\\data_ingestion\\2023-03-31-21-14-54\\ingested_data\\test\\Visadataset.csv', is_ingested=True, message='Data ingestion completed successfully.')]
+[2023-03-31 21:14:57,571] root - INFO - >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>Data Validation log started.<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< 
+
+
+[2023-03-31 21:14:57,609] root - INFO - Validation Process Started
+[2023-03-31 21:14:57,942] root - INFO - Train_set status|is Train filename validated?: True|is train columns validated?: True|is train column name validated?: True|whole missing columns?True
+[2023-03-31 21:14:57,942] root - INFO - Test_set status|is Test filename validated?: Trueis test col numbers validated?: True|is test column names validated? True| whole missing columns? True
+[2023-03-31 21:14:57,942] root - INFO - Validation Process Completed
+[2023-03-31 21:14:57,942] root - INFO - Data validation artifact: DataValidationArtifact(schema_file_path='c:\\Users\\shiva\\Desktop\\test2\\project_template\\config\\schema.yaml', is_validated=True, message='Data validation performed')
+[2023-03-31 21:14:57,942] root - INFO - >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>Data Validation log completed.<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+[2023-03-31 21:14:57,943] root - INFO - Data transformation config: DataTransformationConfig(transformed_train_dir='c:\\Users\\shiva\\Desktop\\test2\\project_template\\us_visa\\artifact\\data_transformation\\2023-03-31-21-14-54\\transformed_data\\train', transformed_test_dir='c:\\Users\\shiva\\Desktop\\test2\\project_template\\us_visa\\artifact\\data_transformation\\2023-03-31-21-14-54\\transformed_data\\test', preprocessed_object_file_path='c:\\Users\\shiva\\Desktop\\test2\\project_template\\us_visa\\artifact\\data_transformation\\2023-03-31-21-14-54\\preprocessed\\preprocessed.pkl')
+[2023-03-31 21:14:57,943] root - INFO - >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>Data Transformation log started.<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+[2023-03-31 21:14:57,943] root - INFO - Obtaining preprocessing object.
+[2023-03-31 21:14:57,960] root - INFO - Obtaining training and test file path.
+[2023-03-31 21:14:57,960] root - INFO - Loading training and test data as pandas dataframe.
+[2023-03-31 21:14:58,107] root - INFO - Outlier capped in train df
+[2023-03-31 21:14:58,112] root - INFO - Outlier capped in test df
+[2023-03-31 21:14:58,113] root - INFO - Splitting input and target feature from training and testing dataframe.
+[2023-03-31 21:14:58,173] root - INFO - Applying preprocessing object on training dataframe and testing dataframe.
+[2023-03-31 21:15:17,243] root - INFO - Saving transformed training and test array.
+[2023-03-31 21:15:17,247] root - INFO - Saving preprocessing object.
+[2023-03-31 21:15:17,274] root - INFO - Data transformation artifact: DataTransformationArtifact(is_transformed=True, message='Data transformation successfull.', transformed_train_file_path='c:\\Users\\shiva\\Desktop\\test2\\project_template\\us_visa\\artifact\\data_transformation\\2023-03-31-21-14-54\\transformed_data\\train\\Visadataset.npz', transformed_test_file_path='c:\\Users\\shiva\\Desktop\\test2\\project_template\\us_visa\\artifact\\data_transformation\\2023-03-31-21-14-54\\transformed_data\\test\\Visadataset.npz', preprocessed_object_file_path='c:\\Users\\shiva\\Desktop\\test2\\project_template\\us_visa\\artifact\\data_transformation\\2023-03-31-21-14-54\\preprocessed\\preprocessed.pkl')
+[2023-03-31 21:15:17,276] root - INFO - >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>Data Transformation log completed.<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< 
+
+
+[2023-03-31 21:15:17,277] root - INFO - Model trainer config: ModelTrainerConfig(trained_model_file_path='c:\\Users\\shiva\\Desktop\\test2\\project_template\\us_visa\\artifact\\model_trainer\\2023-03-31-21-14-54\\trained_model\\model.pkl', base_accuracy=0.6, model_config_file_path='config\\model.yaml')
+[2023-03-31 21:15:17,277] root - INFO - >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>Model trainer log started.<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< 
+[2023-03-31 21:15:17,277] root - INFO - Loading transformed training dataset
+[2023-03-31 21:15:17,297] root - INFO - Loading transformed testing dataset
+[2023-03-31 21:15:17,331] root - INFO - Splitting training and testing input and target feature
+[2023-03-31 21:15:17,331] root - INFO - Extracting model config file path
+[2023-03-31 21:15:17,331] root - INFO - Initializing model factory class using above model config file: config\model.yaml
+[2023-03-31 21:15:17,349] root - INFO - Expected accuracy: 0.6
+[2023-03-31 21:15:17,350] root - INFO - Initiating operation model selection
+[2023-03-31 21:15:21,733] root - INFO - Started Initializing model from config file
+[2023-03-31 21:16:11,698] root - INFO - Executing command: from <module 'sklearn.ensemble' from 'C:\\Application\\anaconda\\envs\\travelling\\lib\\site-packages\\sklearn\\ensemble\\__init__.py'> import RandomForestClassifier
+[2023-03-31 21:16:16,097] root - INFO - Executing:$ RandomForestClassifier().max_depth=0.1
+[2023-03-31 21:16:16,098] root - INFO - Executing:$ RandomForestClassifier(max_depth=0.1).max_features=5
+[2023-03-31 21:16:16,099] root - INFO - Executing:$ RandomForestClassifier(max_depth=0.1, max_features=5).min_samples_split=2
+[2023-03-31 21:16:16,101] root - INFO - Executing:$ RandomForestClassifier(max_depth=0.1, max_features=5).n_estimators=100
+[2023-03-31 21:16:16,101] root - INFO - Executing command: from <module 'sklearn.neighbors' from 'C:\\Application\\anaconda\\envs\\travelling\\lib\\site-packages\\sklearn\\neighbors\\__init__.py'> import KNeighborsClassifier
+[2023-03-31 21:16:16,103] root - INFO - Executing:$ KNeighborsClassifier().n_neighbors=2
+[2023-03-31 21:16:16,105] root - INFO - Executing:$ KNeighborsClassifier(n_neighbors=2).weights=uniform
+[2023-03-31 21:16:19,673] root - INFO - Initialized model: [InitializedModelDetail(model_serial_number='module_0', model=RandomForestClassifier(max_depth=0.1, max_features=5), param_grid_search={'min_samples_split': [2, 8, 15], 'max_features': [5, 'sqrt', 'log2'], 'n_estimators': [100, 200, 1000], 'max_depth': [5, 8, 10]}, model_name='sklearn.ensemble.RandomForestClassifier'), InitializedModelDetail(model_serial_number='module_1', model=KNeighborsClassifier(n_neighbors=2), param_grid_search={'n_neighbors': [3, 5, 9, 11], 'weights': ['uniform', 'distance']}, model_name='sklearn.neighbors.KNeighborsClassifier')]
+[2023-03-31 21:16:31,901] root - INFO - Executing command: from <module 'sklearn.model_selection' from 'C:\\Application\\anaconda\\envs\\travelling\\lib\\site-packages\\sklearn\\model_selection\\__init__.py'> import GridSearchCV
+[2023-03-31 21:16:31,908] root - INFO - Executing:$ GridSearchCV(estimator=RandomForestClassifier(max_depth=0.1, max_features=5),
+             param_grid={'max_depth': [5, 8, 10],
+                         'max_features': [5, 'sqrt', 'log2'],
+                         'min_samples_split': [2, 8, 15],
+                         'n_estimators': [100, 200, 1000]}).cv=2
+[2023-03-31 21:16:31,912] root - INFO - Executing:$ GridSearchCV(cv=2,
+             estimator=RandomForestClassifier(max_depth=0.1, max_features=5),
+             param_grid={'max_depth': [5, 8, 10],
+                         'max_features': [5, 'sqrt', 'log2'],
+                         'min_samples_split': [2, 8, 15],
+                         'n_estimators': [100, 200, 1000]}).verbose=2
+[2023-03-31 21:16:31,913] root - INFO - >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> f"Training RandomForestClassifier Started." <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
